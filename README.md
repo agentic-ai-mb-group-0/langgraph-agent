@@ -1,10 +1,12 @@
 # LangGraph: ein Rechenagent Schritt für Schritt
 
-Ein deutsches **Jupyter-Notebook für den ersten Kontakt mit LangGraph**.
+Zwei deutsche **Jupyter-Notebooks für den ersten Kontakt mit LangGraph**.
 
 Ein Sprachmodell wählt zwischen drei Rechenwerkzeugen. LangGraph steuert den Ablauf und führt den gemeinsamen Zustand weiter.
 
-→ [Notebook öffnen](notebooks/01_langgraph_quickstart.ipynb)
+→ [Ganz einfacher Einstieg](notebooks/00_langgraph_minimal.ipynb): eine Frage, ein Modellknoten, eine Antwort. Der Gemini-Key wird direkt und verdeckt abgefragt, ohne `.env`- oder Pfadlogik.
+
+→ [Rechenagent mit Modell und Werkzeugen](notebooks/01_langgraph_quickstart.ipynb)
 
 ## Einstieg
 
@@ -27,6 +29,8 @@ uv run jupyter lab notebooks/01_langgraph_quickstart.ipynb
 In Jupyter den Kernel **LangGraph · langgraph-agent** wählen. Er ist in der Projektumgebung registriert, nicht global. Nach dem Löschen der `.venv` ist die Registrierung erneut nötig.
 
 Die Zellen von oben nach unten ausführen. Modellaufrufe benötigen Internet und das Kontingent des eigenen Gemini-Zugangs; je nach Tarif entstehen Kosten. Der API-Key bleibt lokal und wird nicht im Notebook gespeichert.
+
+Für den minimalen Einstieg stattdessen `uv run jupyter lab notebooks/00_langgraph_minimal.ipynb` starten. Dieses Notebook fragt den Key direkt ab; eine `.env` ist dafür nicht nötig.
 
 **VS Code:** Notebook öffnen und die Python-Umgebung `.venv` als Kernel auswählen.
 
